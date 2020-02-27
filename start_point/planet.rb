@@ -7,4 +7,6 @@ class Planet
     @distance_from_sun = distance_from_sun
     @number_of_moons = number_of_moons
   end
+ 
+
 end
