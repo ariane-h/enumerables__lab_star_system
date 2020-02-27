@@ -38,4 +38,20 @@ class StarSystem
       return planets.count
     end
 
+    def get_total_number_of_moons
+      moons = @planets.map {|planet| planet.number_of_moons}
+      return moons.sum
+    end
+
+    def get_planet_names_sorted_by_increasing_distance_from_sun
+      planets = @planets.sort_by {|planet| planet.distance_from_sun }
+      planets.map {|planet| planet.name }
+    end
+
+    def get_planet_names_sorted_by_size_decreasing
+      planets = @planets.sort_by {|planet| planet.diameter }
+      result = planets.map {|planet| planet.name }
+      return result.reverse
+    end
+
 end
