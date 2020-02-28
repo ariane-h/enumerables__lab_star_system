@@ -9,11 +9,11 @@ class StarSystem
   end
 
   def planet_names
-    @planets.map {|planet| planet.name }
+    return @planets.map {|planet| planet.name }
   end
 
   def get_planet_by_name(planet_name)
-    @planets.map.find(planet_name) {|planet| planet.name == planet_name }
+    return @planets.find(planet_name) {|planet| planet.name == planet_name }
   end
 
   def get_largest_planet
@@ -30,7 +30,7 @@ class StarSystem
 
   def get_planets_with_more_moons(number)
     planets = @planets.select {|planet| planet.number_of_moons > number }
-    planets.map {|planet| planet.name }
+    return planets.map {|planet| planet.name }
   end
 
     def get_number_of_planets_closer_than(distance)
